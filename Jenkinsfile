@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    trigger {
+        cron('* * * * *') // This will trigger the pipeline every day at 2 AM
+    }
     stages {
         stage('Build') {
             steps {
